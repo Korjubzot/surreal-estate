@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 import logo from "../images/logo.png";
 
@@ -7,8 +8,12 @@ const NavBar = () => {
     <div className="navbar">
       <img className="logo" src={logo} alt="surreal estate logo" />
       <ul className="navbar-links">
-        <li className="navbar-links-item">placeholder1</li>
-        <li className="navbar-links-item">placeholder2</li>
+        <li className="navbar-links-item">
+          <Link to="/">View Properties</Link>
+        </li>
+        <li className="navbar-links-item">
+          <Link to="/add-property">Add Properties</Link>
+        </li>
       </ul>
     </div>
   );
