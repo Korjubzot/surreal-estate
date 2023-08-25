@@ -33,6 +33,7 @@ const AddProperty = () => {
           <input
             id="title"
             name="title"
+            placeholder="2 bed city centre flat"
             value={fields.title}
             onChange={handleFieldChange}
           />
@@ -64,7 +65,7 @@ const AddProperty = () => {
             <option value="detached">Detached</option>
             <option value="semi-detached">Detached</option>
             <option value="terraced">Terraced</option>
-            <option value="end-of-terrace">End of Terraca</option>
+            <option value="end-of-terrace">End of Terrace</option>
             <option value="cottage">Cottage</option>
             <option value="bungalow">Bungalow</option>
           </select>
@@ -73,6 +74,10 @@ const AddProperty = () => {
         <label htmlFor="bedrooms">
           Bedrooms
           <input
+            type="number"
+            min="1"
+            max="6"
+            placeholder="2"
             id="bedrooms"
             name="bedrooms"
             value={fields.bedrooms}
@@ -83,6 +88,10 @@ const AddProperty = () => {
         <label htmlFor="bathrooms">
           Bathrooms
           <input
+            type="number"
+            min="1"
+            max="6"
+            placeholder="2"
             id="bathrooms"
             name="bathrooms"
             value={fields.bathrooms}
@@ -91,10 +100,12 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="price">
-          Price
+          Price £
           <input
+            type="number"
             id="price"
             name="price"
+            placeholder="500,000"
             value={fields.price}
             onChange={handleFieldChange}
           />
@@ -103,8 +114,10 @@ const AddProperty = () => {
         <label htmlFor="email">
           Email
           <input
+            type="email"
             id="email"
             name="email"
+            placeholder="john.smith@email.com"
             value={fields.email}
             onChange={handleFieldChange}
           />
