@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from "axios";
 import "../styles/addproperty.css";
 
 const AddProperty = () => {
@@ -18,7 +20,15 @@ const AddProperty = () => {
 
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+    axios
+      .post("http://localhost:4000/api/v1/PropertyListing", fields)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    // console.log(fields);
   };
 
   const handleFieldChange = (event) => {
