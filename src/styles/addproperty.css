@@ -1,3 +1,21 @@
 .add-property {
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-div {
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.form-div-bathroom {
+  padding: 10px;
+  margin: 8px 0;
+}
+
+input,
+select {
+  width: auto;
+  margin-left: 10px;
 }
