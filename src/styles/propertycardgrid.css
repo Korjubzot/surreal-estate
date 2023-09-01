@@ -1,0 +1,39 @@
+.property-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.title-property-card {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.type-city {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.bathrooms,
+.bedrooms,
+.price {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.email {
+  font-size: 0.8rem;
+  margin: 10px 0;
+  text-decoration: none !important;
+  background-color: plum;
+  border: 1px solid plum;
+  color: white;
+}
