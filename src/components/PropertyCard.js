@@ -1,4 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSink,
+  faBed,
+  faSterlingSign,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 
 const PropertyCard = (props) => {
   const { title, city, type, bedrooms, bathrooms, price, email } = props;
@@ -9,10 +17,17 @@ const PropertyCard = (props) => {
       <h5 className="type-city">
         {type} - {city}
       </h5>
-      <h5 className="bathrooms">{bathrooms} bathrooms</h5>
-      <h5 className="bedrooms">{bedrooms} bedrooms</h5>
-      <h5 className="price">£{price}</h5>
+      <h5 className="bathrooms">
+        <FontAwesomeIcon icon={faBed} /> {bathrooms}
+      </h5>
+      <h5 className="bedrooms">
+        <FontAwesomeIcon icon={faSink} /> {bedrooms}
+      </h5>
+      <h5 className="price">
+        <FontAwesomeIcon icon={faSterlingSign} /> {price}
+      </h5>
       <h5 className="email">
+        <FontAwesomeIcon icon={faEnvelope} />
         <a href={`mailto:${email}`}>Contact</a>
       </h5>
     </div>

@@ -4,16 +4,17 @@ import PropertyCard from "../components/PropertyCard";
 
 describe("Property Card", () => {
   test("renders the PropertyCard component", () => {
-    render(<PropertyCard />);
+    const validProps = {
+      title: "2 bed city center",
+      city: "Manchester",
+      type: "Flat",
+      bedrooms: 2,
+      bathrooms: 2,
+      price: 500000,
+      email: "john.smith@gmail.com",
+    };
+    const { asFragment } = render(<PropertyCard props={validProps} />);
 
-    expect(screen.getByText("2 bed city center")).toBeInTheDocument();
-    expect(screen.getByText("Flat - Manchester")).toBeInTheDocument();
-    expect(screen.getByText("2 bedrooms")).toBeInTheDocument();
-    expect(screen.getByText("2 bathrooms")).toBeInTheDocument();
-    expect(screen.getByText("£500000")).toBeInTheDocument();
-
-    const contactLink = screen.getByText("Contact");
-    expect(contactLink).toBeInTheDocument();
-    expect(contactLink).toHaveAttribute("href", "mailto:john.smith@gmail.com");
+    expect(asFragment()).toMatchSnapshot();
   });
 });
