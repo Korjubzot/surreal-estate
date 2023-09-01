@@ -1,26 +1,19 @@
 import React from "react";
 
-const PropertyCard = () => {
-  const dummyData = {
-    title: "2 bed city center",
-    city: "Manchester",
-    type: "Flat",
-    bedrooms: 2,
-    bathrooms: 2,
-    price: 500000,
-    email: "john.smith@gmail.com",
-  };
+const PropertyCard = (props) => {
+  const { title, city, type, bedrooms, bathrooms, price, email } = props;
+
   return (
     <div className="property-card">
-      <h4 className="title-property-card">{dummyData.title}</h4>
+      <h4 className="title-property-card">{title}</h4>
       <h5 className="type-city">
-        {dummyData.type} - {dummyData.city}
+        {type} - {city}
       </h5>
-      <h5 className="bathrooms">{dummyData.bathrooms} bathrooms</h5>
-      <h5 className="bedrooms">{dummyData.bedrooms} bedrooms</h5>
-      <h5 className="price">£{dummyData.price}</h5>
+      <h5 className="bathrooms">{bathrooms} bathrooms</h5>
+      <h5 className="bedrooms">{bedrooms} bedrooms</h5>
+      <h5 className="price">£{price}</h5>
       <h5 className="email">
-        <a href={`mailto:${dummyData.email}`}>Contact</a>
+        <a href={`mailto:${email}`}>Contact</a>
       </h5>
     </div>
   );
