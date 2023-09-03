@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PropertyCard from "./PropertyCard";
+import Alert from "./Alert";
 import "../styles/propertycardgrid.css";
 
 const Properties = () => {
+  const initialState = {
+    alert: {
+      message: "",
+      isError: false,
+    },
+  };
   const [properties, setProperties] = useState([]);
-  const [alert, setAlert] = useState({ message: "" });
+  const [alert, setAlert] = useState(initialState.alert);
 
   useEffect(() => {
     axios
@@ -14,22 +21,13 @@ const Properties = () => {
         setProperties(data);
       })
       .catch(() => {
-        setAlert({ message: "Error: Failed to Load, idiot." });
+        setAlert({ message: "Error: Failed to Load, idiot.", isError: true });
       });
   }, []);
 
-  const dummyData = {
-    title: "2 bed city center",
-    city: "Manchester",
-    type: "Flat",
-    bedrooms: 2,
-    bathrooms: 2,
-    price: 500000,
-    email: "john.smith@gmail.com",
-  };
-
   return (
     <div className="property-card-grid">
+      <Alert message={alert.message} error={alert.isError} />
       {properties.map((property) => (
         <div className="item">
           <PropertyCard key={property._id} {...property} />{" "}
