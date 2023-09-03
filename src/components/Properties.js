@@ -31,7 +31,9 @@ const Properties = () => {
   return (
     <div className="property-card-grid">
       {properties.map((property) => (
-        <PropertyCard key={property._id} {...property} />
+        <div className="item">
+          <PropertyCard key={property._id} {...property} />{" "}
+        </div>
       ))}
     </div>
   );
