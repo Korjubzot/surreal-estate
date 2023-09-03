@@ -73,10 +73,10 @@ const AddProperty = () => {
               value={fields.city}
               onChange={handleFieldChange}
             >
-              <option value="manchester">Manchester</option>
-              <option value="leeds">Leeds</option>
-              <option value="sheffield">Sheffield</option>
-              <option value="liverpool">Liverpool</option>
+              <option value="Manchester">Manchester</option>
+              <option value="Leeds">Leeds</option>
+              <option value="Sheffield">Sheffield</option>
+              <option value="Liverpool">Liverpool</option>
             </select>
           </label>
         </div>
@@ -92,7 +92,7 @@ const AddProperty = () => {
             >
               <option value="flat">Flat</option>
               <option value="detached">Detached</option>
-              <option value="semi-detached">Detached</option>
+              <option value="semi-detached">Semi-detached</option>
               <option value="terraced">Terraced</option>
               <option value="end-of-terrace">End of Terrace</option>
               <option value="cottage">Cottage</option>

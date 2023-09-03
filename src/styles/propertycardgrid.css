@@ -1,5 +1,6 @@
 .property-card-grid {
   padding: 0.5 rem;
+  display: flex;
 }
 
 .property-card-grid > .item {
@@ -7,6 +8,10 @@
   width: 33.33%;
   padding: 0.5 rem;
   box-sizing: border-box;
+}
+
+.property-card-grid > .sidebar {
+  width: 8%;
 }
 
 .property-card {
