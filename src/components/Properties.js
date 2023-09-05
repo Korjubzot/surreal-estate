@@ -40,8 +40,8 @@ const Properties = () => {
       <Sidebar className="sidebar" />
       <Alert message={alert.message} error={alert.isError} />
       {properties.map((property) => (
-        <div className="item">
-          <PropertyCard key={property._id} {...property} />{" "}
+        <div className="item" key={property._id}>
+          <PropertyCard {...property} />{" "}
         </div>
       ))}
     </div>

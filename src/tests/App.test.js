@@ -1,8 +1,15 @@
-import React, { render, screen } from "@testing-library/react";
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import App from "../components/App";
 
-xtest("renders learn react link", () => {
-  render(<App />);
-  const headerElement = screen.getByText(/Surreal Estate/i);
-  expect(headerElement).toBeInTheDocument();
+it("renders App component", () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+
+  expect(screen.getByText("Surreal Estate")).toBeInTheDocument();
+  expect(screen.getByTestId("navbar")).toBeInTheDocument();
 });

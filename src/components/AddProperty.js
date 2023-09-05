@@ -60,6 +60,7 @@ const AddProperty = () => {
               placeholder="2 bed city centre flat"
               value={fields.title}
               onChange={handleFieldChange}
+              required
             />
           </label>
         </div>
@@ -113,6 +114,7 @@ const AddProperty = () => {
               name="bedrooms"
               value={fields.bedrooms}
               onChange={handleFieldChange}
+              required
             />
           </label>
 
@@ -127,6 +129,7 @@ const AddProperty = () => {
               name="bathrooms"
               value={fields.bathrooms}
               onChange={handleFieldChange}
+              required
             />
           </label>
         </div>
@@ -141,6 +144,7 @@ const AddProperty = () => {
               placeholder="500,000"
               value={fields.price}
               onChange={handleFieldChange}
+              required
             />
           </label>
         </div>
@@ -155,6 +159,7 @@ const AddProperty = () => {
               placeholder="john.smith@email.com"
               value={fields.email}
               onChange={handleFieldChange}
+              required
             />
           </label>
         </div>
