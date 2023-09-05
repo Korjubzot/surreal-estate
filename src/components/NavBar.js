@@ -9,10 +9,10 @@ const NavBar = () => {
       <img className="logo" src={logo} alt="surreal estate logo" />
       <ul className="navbar-links">
         <li className="navbar-links-item">
-          <Link to="/">View Properties</Link>
+          <Link to="/">View All Properties</Link>
         </li>
         <li className="navbar-links-item">
-          <Link to="/add-property">Add Properties</Link>
+          <Link to="/add-property">Add New Property</Link>
         </li>
       </ul>
     </div>

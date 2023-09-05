@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" exact element={<Properties />} />
         <Route path="/add-property" exact element={<AddProperty />} />
       </Routes>
-      <h2>Surreal Estate</h2>
+      <h2 className="footer">Surreal Estate</h2>
     </div>
   );
 };

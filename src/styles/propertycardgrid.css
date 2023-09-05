@@ -1,38 +1,38 @@
 .property-card-grid {
-  padding: 0.5 rem;
+  padding: 1 rem;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
-
-/* .property-card-grid .item {
-  display: inline-block;
-  width: 33.33%;
-  padding: 0.5 rem;
-  box-sizing: border-box;
-} */
 
 .property-card-grid .item {
   flex: 0 0 calc(33.33% - 1rem);
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
 }
 
 .property-card {
-  border: 1px solid #ccc;
-  padding: 20px;
+  border: 1px solid #ddd;
+  padding: 1rem;
   text-align: center;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
 }
 
 .title-property-card {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 0;
+  color: #333;
 }
 
 .type-city {
   font-size: 1rem;
-  margin: 5px 0;
+  margin: 8px 0;
+  color: #777;
 }
 
 .bathrooms,
@@ -40,13 +40,22 @@
 .price {
   font-size: 0.9rem;
   margin: 5px 0;
+  color: #555;
 }
 
-.email {
+.email a {
   font-size: 0.8rem;
   margin: 10px 0;
   text-decoration: none !important;
   background-color: plum;
   border: 1px solid plum;
   color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.email:hover {
+  background-color: #933d91; /* Darker color on hover */
+  border: 1px solid #933d91;
 }
