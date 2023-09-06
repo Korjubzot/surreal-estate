@@ -2,13 +2,18 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import AddProperty from "../components/AddProperty";
 
+// Mock function to simulate the form submission
+const mockSubmit = jest.fn();
+
 describe("Add Property", () => {
   it("renders correctly", () => {
     render(<AddProperty />);
   });
 
   it("fires form submission correctly", async () => {
-    const { getByLabelText, getByText } = render(<AddProperty />);
+    const { getByLabelText, getByText } = render(
+      <AddProperty onSubmit={mockSubmit} />
+    );
     const titleInput = getByLabelText("Title");
     const cityInput = getByLabelText("City");
     const typeInput = getByLabelText("Type");
@@ -29,13 +34,21 @@ describe("Add Property", () => {
     fireEvent.click(submitButton);
 
     await waitFor(() => {
+      expect(mockSubmit).toHaveBeenCalledWith({
+        title: "Test input",
+        city: "Manchester",
+        type: "Bungalow",
+        bedrooms: 2,
+        bathrooms: 1,
+        price: 111111,
+        email: "test.email@gmail.com",
+      });
       const successMessage = getByText("Property Added");
       expect(successMessage).toBeInTheDocument();
     });
   });
 
   xit("rejects an improperly filled form", () => {
-    // gives broken props i.e. invalid email, no title
-    // expect to fail
+    // You can write test cases for form validation here
   });
 });

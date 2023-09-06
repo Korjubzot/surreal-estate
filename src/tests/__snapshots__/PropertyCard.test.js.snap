@@ -91,6 +91,7 @@ exports[`Property Card renders the PropertyCard component 1`] = `
           fill="currentColor"
         />
       </svg>
+       
       <a
         href="mailto:undefined"
       >

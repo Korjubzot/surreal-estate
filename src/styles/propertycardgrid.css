@@ -45,7 +45,7 @@
 
 .email a {
   font-size: 0.8rem;
-  margin: 10px 0;
+  /* margin: 5px 0; */
   text-decoration: none !important;
   background-color: plum;
   border: 1px solid plum;
@@ -56,6 +56,6 @@
 }
 
 .email:hover {
-  background-color: #933d91; /* Darker color on hover */
+  /* background-color: #933d91; */
   border: 1px solid #933d91;
 }

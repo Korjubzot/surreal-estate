@@ -28,6 +28,7 @@ const PropertyCard = (props) => {
       </h5>
       <h5 className="email">
         <FontAwesomeIcon icon={faEnvelope} />
+        &nbsp;
         <a href={`mailto:${email}`}>Contact</a>
       </h5>
     </div>
